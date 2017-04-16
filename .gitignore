@@ -55,3 +55,6 @@ graphics
 node_modules
 fonts
 *.png
+*.codekit3
+
+*.scss
