@@ -224,7 +224,8 @@ progress {
   width: 100%;
   height: auto;
   max-width: 1000px;
-  max-height: 500px; }
+  max-height: 500px;
+  margin: 30px 0 30px 0; }
 
 .overlay {
   position: fixed;
@@ -247,10 +248,11 @@ progress {
       margin: 10px 30px 10px 30px;
       cursor: pointer; }
     .pic_wrap img {
-      width: auto;
+      width: 446px;
       height: auto;
       max-height: 250px;
-      transition: 300ms all; }
+      transition: 300ms all;
+      margin: 0; }
     .pic_wrap img:hover {
       filter: contrast(0.8) brightness(0.9); }
   .overlay {
