@@ -1,31 +1,36 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400|Yeseva+One");
+@import url("https://fonts.googleapis.com/css?family=Abel|Poiret+One");
 .info_wrap {
   display: flex;
   justify-content: space-around;
   align-items: center; }
   .info_wrap p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 18px;
+    color: white;
     margin: 0 50px 0 -40px; }
 
 .skill-list p {
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: white; }
 
 .stat_title {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px; }
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+  color: white; }
 
 .stat_info {
   display: flex;
   justify-content: center;
   align-items: center; }
   .stat_info p {
-    font-family: 'Open Sans', sans-serif; }
+    font-family: 'Abel', sans-serif;
+    color: white; }
 
 .data {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 16px;
-  list-style-type: none; }
+  list-style-type: none;
+  color: white; }
 
 .bottom_wrap {
   display: flex;
@@ -36,7 +41,7 @@
 .divider {
   width: 80%;
   height: 5px;
-  background-color: black;
+  background-color: white;
   margin: 0 0 0 0; }
 
 .p_bar_2 {
@@ -47,7 +52,7 @@
 .b_bar_2 {
   width: 30px;
   height: 30px;
-  background-color: #231F20; }
+  background-color: #36AAF7; }
 
 .length {
   display: flex;
@@ -56,7 +61,7 @@
   width: 100%;
   margin: 0 0 0 15px; }
   .length p {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 15px; }
 
 .end {
@@ -73,20 +78,20 @@ progress {
   width: 100%; }
 
 .graph_text {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 24px;
   font-weight: 300;
   padding-bottom: 20px;
   text-align: left; }
 
 .skill_1 progress::-webkit-progress-value {
-  background: #231F20; }
+  background: #36AAF7; }
 
 .skill_2 progress::-webkit-progress-value {
   background: #BBA815; }
 
 .skill_1 progress::-moz-progress-bar {
-  background: #231F20; }
+  background: #36AAF7; }
 
 .skill_2 progress::-moz-progress-bar {
   background: #BBA815; }
@@ -98,33 +103,35 @@ progress {
 
 .skill_1 {
   margin-bottom: 1em;
-  position: relative; }
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
   .skill_1 h3 {
     color: white;
     font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     left: 1em;
     line-height: 0;
     position: absolute;
     top: .65em; }
-  .skill_1 ::progress-value {
-    animation: bar-fill 2s;
-    width: 0px; }
 
 .skill_2 {
   margin-bottom: 1em;
-  position: relative; }
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
   .skill_2 h3 {
     color: white;
     font-size: 1em;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     left: 1em;
     line-height: 0;
     position: absolute;
     top: .65em; }
-  .skill_2 ::progress-value {
-    animation: bar-fill 2s;
-    width: 0px; }
+
+@keyframes progressBar {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
 
 @media screen and (min-width: 768px) {
   .graph_wrap {
@@ -139,7 +146,7 @@ progress {
       padding: 10px 0 0 30px; } }
 
 .comp_bg {
-  background: url(../graphics/highway.jpg) no-repeat center center fixed;
+  background: url(../graphics/porsche_comp.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 .white_box {
@@ -148,8 +155,8 @@ progress {
   margin: 170px 0 0 0;
   position: absolute; }
   .white_box p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-family: 'Abel', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     text-indent: 35px;
     padding: 20px;
@@ -170,7 +177,7 @@ progress {
     border: solid 3px white;
     height: 50px; }
   .website h5 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Abel', sans-serif;
     font-size: 30px;
     padding: 15px;
     font-weight: 300;
@@ -201,30 +208,51 @@ progress {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin: 10px 0 0 0; }
+  margin: -65px 0 0 0; }
   .contain_vid iframe {
     width: 375px;
     height: 190px; }
+  .contain_vid p {
+    font-family: 'Abel', sans-serif;
+    color: white;
+    max-width: 400px; }
+  .contain_vid h3 {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 20px;
+    max-width: 400px;
+    margin-left: 75px; }
 
 @media screen and (min-width: 768px) {
   .contain_vid {
     margin: 200px 0 0 0; }
     .contain_vid iframe {
       width: 700px;
-      height: 400px; } }
+      height: 400px; }
+    .contain_vid p {
+      max-width: 600px;
+      margin-left: 45px; }
+    .contain_vid h3 {
+      font-size: 25px;
+      max-width: 400px;
+      margin-left: 232px; } }
 
 @media screen and (min-width: 1024px) {
   .contain_vid {
     margin: 200px 0 0 0; }
     .contain_vid iframe {
       width: 900px;
-      height: 500px; } }
+      height: 500px; }
+    .contain_vid p {
+      max-width: 800px;
+      margin-left: 50px; }
+    .contain_vid h3 {
+      font-size: 27px;
+      max-width: 400px;
+      margin-left: 292px; } }
 
 .pic_wrap img {
   width: 100%;
-  height: auto;
-  max-width: 1000px;
-  max-height: 500px;
   margin: 30px 0 30px 0; }
 
 .overlay {
@@ -237,6 +265,18 @@ progress {
   visibility: hidden;
   opacity: 0;
   z-index: 100; }
+
+.right_nav img {
+  width: auto;
+  height: auto;
+  max-width: 40px;
+  max-height: 40px; }
+
+.left_nav img {
+  width: auto;
+  height: auto;
+  max-width: 40px;
+  max-height: 40px; }
 
 @media screen and (min-width: 768px) {
   .pic_wrap {
@@ -294,7 +334,7 @@ progress {
   .right_next {
     width: 45px;
     height: 45px;
-    margin-left: 20px;
+    margin-left: 35px;
     position: fixed; }
     .right_next i {
       color: #FFF; }
@@ -305,6 +345,16 @@ progress {
     margin-left: -74px; }
     .left_next i {
       color: #FFF; }
+  .right_nav img {
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px; }
+  .left_nav img {
+    width: auto;
+    height: auto;
+    max-width: 50px;
+    max-height: 50px; }
   .popup .close:hover {
     color: #D3D3D3;
     transform: scale(1.3); }
@@ -319,6 +369,9 @@ progress {
 
 * {
   box-sizing: border-box; }
+
+html {
+  background-color: #1D1E1E; }
 
 body {
   margin: 0; }
@@ -335,27 +388,22 @@ figcaption {
   position: absolute;
   top: 0;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Abel', sans-serif;
   font-size: 24px;
-  margin: 8px 0 0 20px; }
+  margin: 8px 0 0 20px;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); }
 
 .greet {
   text-align: center;
   margin: 20px auto 20px auto;
-  font-family: 'Yeseva One', cursive;
-  font-size: 45px; }
+  font-family: 'Poiret One', cursive;
+  font-size: 45px;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); }
 
 .header_1 {
   width: 100%;
-  background-color: white;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.header_2 {
-  width: 100%;
-  background-color: black;
+  background-color: #121212;
   position: absolute;
   display: flex;
   align-items: center;
@@ -364,33 +412,16 @@ figcaption {
 .left_nav {
   order: -1; }
 
-.left_nav_2 {
-  order: -1; }
-
 .brand_title {
-  font-size: 30px; }
-
-.brand_title_2 {
   font-size: 30px;
+  font-family: 'Poiret One', cursive;
   color: white; }
 
-.fa-arrow-circle-left {
-  color: black;
+.left_arrow_s {
   cursor: pointer;
   margin-left: 10px; }
 
-.fa-arrow-circle-right {
-  color: black;
-  cursor: pointer;
-  margin-right: 10px; }
-
-.left_nav_2 i {
-  color: white;
-  cursor: pointer;
-  margin-left: 10px; }
-
-.right_nav_2 i {
-  color: white;
+.right_arrow_s {
   cursor: pointer;
   margin-right: 10px; }
 
@@ -404,8 +435,8 @@ figcaption {
   margin-top: 30px;
   z-index: -2; }
   .slogan p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 22px;
+    font-family: 'Abel', sans-serif;
+    font-size: 30px;
     color: white;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); }
 
@@ -415,7 +446,7 @@ figcaption {
 
 .hamburger {
   font-size: 60px;
-  color: #1A1C1D;
+  color: white;
   cursor: pointer;
   position: relative;
   margin: 90px 20px 0 0; }
@@ -443,6 +474,7 @@ figcaption {
   padding: 8px 8px 8px 32px;
   margin: 30px 0 30px 0;
   text-decoration: none;
+  font-family: 'Poiret One', cursive;
   font-size: 25px;
   color: #818181;
   display: block;
@@ -452,10 +484,9 @@ figcaption {
   color: #f1f1f1; }
 
 .header_desktop_1 {
-  display: none; }
-
-.header_desktop_2 {
-  display: none; }
+  display: none;
+  font-family: 'Poiret One', cursive;
+  padding: 15px 0 0 0; }
 
 .bg {
   background: url(../graphics/porsche_bg.jpg) no-repeat center center fixed;
@@ -473,49 +504,49 @@ figcaption {
   display: none;
   visibility: hidden;
   text-align: center;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Poiret One', cursive;
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8); }
+
+.shine:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 0%;
+  height: 95%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none; }
+
+.shine:hover:after {
+  width: 106%;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out; }
+
+.nav {
+  transition: 0.3s ease;
+  font-size: 20px;
+  text-decoration: none;
+  border-top: 1.5px solid transparent;
+  border-bottom: 1.5px solid transparent;
+  padding: 20px 0;
+  margin: 0 20px; }
+
+.nav:hover {
+  border-top: 1.5px solid #ffffff;
+  border-bottom: 1.5px solid #ffffff;
+  padding: 6px 0; }
 
 @media screen and (min-width: 768px) {
-  .hamburger {
-    display: none; }
-  .slogan {
-    margin-top: 200px; }
-    .slogan p {
-      font-size: 35px; }
-  .header_desktop_2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px 0 0 0;
-    position: absolute; }
-    .header_desktop_2 a {
-      text-decoration: none;
-      color: black;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
-      font-size: 28px; }
-  .header_desktop_1 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px 0 0 0;
-    position: absolute; }
-    .header_desktop_1 a {
-      text-decoration: none;
-      color: white;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
-      font-size: 28px; }
-  .brand_title {
-    font-size: 40px; }
-  .brand_title_2 {
-    font-size: 40px; }
-  .home {
-    margin: 0 0 0 25px; }
-  .stats {
-    margin: 0 25px 0 0; } }
-
-@media screen and (min-width: 844px) {
   .wrapper {
     flex-direction: row;
     flex-wrap: wrap; }
@@ -533,7 +564,39 @@ figcaption {
     visibility: visible;
     text-align: center;
     font-size: 50px;
-    margin: 20px auto 20px auto; } }
+    margin: 20px auto 20px auto; }
+  .hamburger {
+    display: none; }
+  .slogan {
+    margin-top: 200px; }
+    .slogan p {
+      font-size: 35px; }
+  .header_desktop_1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0 0 0;
+    position: absolute; }
+    .header_desktop_1 a {
+      text-decoration: none;
+      color: white;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
+      font-size: 28px; }
+  .brand_title {
+    font-size: 40px; }
+  .left_arrow_s {
+    cursor: pointer;
+    margin-left: 10px; }
+  .right_arrow_s {
+    cursor: pointer;
+    margin-right: 10px; }
+  .home {
+    margin: 0 0 0 25px; }
+  .stats {
+    margin: 0 25px 0 0; }
+  figcaption {
+    margin: 12px 0 0 20px; } }
 
 @media screen and (min-width: 1072px) {
   .wrapper {

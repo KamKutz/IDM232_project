@@ -16,49 +16,51 @@
 
 			<div class="header_1">
 				<div class="title">
-					<h1 class="brand_title">Porsche</h1>
+					<h1 class="brand_title">Porsche 911 Turbo</h1>
 				</div>
 				<div class="left_nav">
 					<a href="#">
-						<i class="fa fa-arrow-circle-left fa-3x"></i>
+						<img  class="left_arrow_s" src="graphics/left_arrow_s.png" alt="Left Arrow">
 					</a>
 				</div>
 				<div class="right_nav">
 					<a href="#">
-						<i class="fa fa-arrow-circle-right fa-3x"></i>
+						<img class="right_arrow_s" src="graphics/right_arrow_s.png" alt="Right Arrow">
 					</a>
 				</div>
 			</div>
 
 			<div class="header_desktop_1">
 				<div class="home">
-					<a href="index.html"><i class="fa fa-home fa-2x"></i></a>
+					<a class="nav" href="index.html">Home</a>
 				</div>
 				<div>
-					<a href="company.html">Company</a>
+					<a class="nav" href="company.php">Company</a>
 				</div>
 				<div>					
-					<a href="videos.html">Videos</a>
+					<a class="nav" href="videos.php">Videos</a>
 				</div>
 				<div>
-					<a href="pics.html">Pictures</a>
+					<a class="nav" href="pics.php">Pictures</a>
 				</div>
 				<div class="stats">
-					<a href="stats.html">Stats</a>
+					<a class="nav" href="stats.php">Stats</a>
 				</div>
 			</div>
 
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="index.html">Home</a>
-			  <a href="company.html">Company</a>
-			  <a href="videos.html">Videos</a>
-			  <a href="#">Pictures</a>
-			  <a href="stats.html">Stats</a>
+			  <a href="company.php">Company</a>
+			  <a href="videos.php">Videos</a>
+			  <a href="pics.php">Pictures</a>
+			  <a href="stats.php">Stats</a>
 			</div>
 			
 			<div class="hamb_wrap">
-				<span class="hamburger" onclick="openNav()">&#9776;</span>
+				<span class="hamburger" onclick="openNav()"><!-- &#9776; -->
+					<img src="graphics/hamburger.png" alt="Hamburger Menu">
+				</span>
 			</div>
 
 			<div class="slogan">

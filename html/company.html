@@ -1,5 +1,31 @@
+<?php
+  // Step 1: Create Database Connection
+  $dbhost = "localhost";
+  $dbuser = "root";
+  $dbpass = "root";
+  $dbname = "idm232_project";
+  $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+  // Check the connection is good with no errors
+  if (mysqli_connect_errno()) {
+    die ("Database connection failed: " .
+      mysqli_connect_error() .
+      " (" . mysqli_connect_errno() . ")"
+    );
+  }
+  // Step 2: Preform Database Query
+  $query = "SELECT * FROM images";
+  $result = mysqli_query($connection, $query);
+  // Check there are no errors with our SQL statement
+  if (!$result) {
+    die ("Database query failed.");
+  }
+?>
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html class="comp_bg" lang="en">
 	<head>
 		<meta name="viewport"
 		content="initial-scale=1.0,
@@ -9,7 +35,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<meta charset="UTF-8">
-		<title>Sportscar Videos</title>
+		<title>Sportscar Company</title>
 	</head>
 	
 	<body>
@@ -30,7 +56,7 @@
 			</div>
 		</div>
 
-		<div class="header_desktop_2">
+		<div class="header_desktop_1">
 			<div class="home">
 				<a href="index.html"><i class="fa fa-home fa-2x"></i></a>
 			</div>
@@ -57,20 +83,21 @@
 		  <a href="stats.html">Stats</a>
 		</div>
 
+		<div class="white_contain">
+			<div class="white_box">
+				<p>	Shaping the future of the sportscar this is the theme of Strategy 2025. At the heart of the strategy is our future product portfolio. The sportscar of the future will blend the history and values of the Porsche brand with innovative technologies, while at the same time ensuring sustainability. In achieving this, topics such as electromobility, digitalisation and connectivity will play an important role. Embracing these topics will allow us to shape the exclusive and sporty mobility of tomorrow. Nevertheless, with all the innovations and modifications in front of us, one thing remains constant: Anything that carries the Porsche crest will also feature the excellent quality that is synonymous with Porsche.</p>
+			</div>
+		</div>
+
 		<div class="hamb_wrap">
 			<span class="hamburger" onclick="openNav()">&#9776;</span>
 		</div>
 
-		<div class="contain_vid">
-			<div>
-				<iframe src="https://www.youtube.com/embed/kFKMPTIa3OI?ecver=2"></iframe>
-			</div>
-			<div>
-				<iframe src="https://www.youtube.com/embed/tD5iy5Zrg7o?ecver=2"></iframe>
+		<div class="website">
+			<div class="contain_web">
+				<h5>Website</h5>
 			</div>
 		</div>
-
-
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
