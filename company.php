@@ -1,13 +1,13 @@
 <?php 
-require 'connect.inc.php';
+// require 'connect.inc.php';
 
-  $query = "SELECT * FROM cars ORDER BY id";
-  $result = mysqli_query($connection, $query);
+//   $query = "SELECT * FROM cars ORDER BY id";
+//   $result = mysqli_query($connection, $query);
 
-  // Check there are no errors with our SQL statement
-  if (!$result) {
-    die ("Database query failed.");
-  }
+//   // Check there are no errors with our SQL statement
+//   if (!$result) {
+//     die ("Database query failed.");
+//   }
  ?>
 
 
