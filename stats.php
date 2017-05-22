@@ -33,7 +33,7 @@
 
 		<div class="header_desktop_1">
 			<div class="home">
-				<a class="nav" href="index.html">Home</a>
+				<a class="nav" href="index.php">Home</a>
 			</div>
 			<div>
 				<a class="nav" href="company.php">Company</a>
@@ -51,7 +51,7 @@
 
 		<div id="mySidenav" class="sidenav">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		  <a href="index.html">Home</a>
+		  <a href="index.php">Home</a>
 		  <a href="company.php">Company</a>
 		  <a href="videos.php">Videos</a>
 		  <a href="pics.php">Pictures</a>

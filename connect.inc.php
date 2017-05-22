@@ -12,6 +12,4 @@
       " (" . mysqli_connect_errno() . ")"
     );
   }
-
-
 ?>

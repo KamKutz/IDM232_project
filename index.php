@@ -1,3 +1,22 @@
+<?php
+
+  include('connect.inc.php');
+  // include('arrays.php');
+
+  // Step 2: Preform Database Query
+  $query = "SELECT * FROM cars";
+  $result = mysqli_query($connection, $query);
+  // Check there are no errors with our SQL statement
+  if (!$result) {
+    die ("Database query failed.");
+  }
+
+ ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -16,17 +35,19 @@
 		<h1 class="greet_big"> Pick Your Luxury Car </h1>
 
 		<div class="wrapper">
+		
 			<div>
-				<a href="#">
-					<figure class="shine">
-						<img src="graphics/audi.png" alt="Audi Link">
-						<figcaption> Audi </figcaption>
-					</figure>
-				</a>
+				<?php while $row = mysqli_fetch_assoc($result)) {?>
+					<a href="brand.php?brand=<?php echo $brand; ?>">
+						<figure class="shine">
+							<img src="graphics/audi.png" alt="Audi Link">
+							<figcaption> Audi </figcaption>
+						</figure>
+					</a>
 			</div>
-
-			<div>
-				<a href="#">
+}
+<!-- 			<div>
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/aston.png" alt="Aston Link" width="282" height="42">
 						<figcaption> Aston Martin </figcaption>
@@ -35,7 +56,7 @@
 			</div>
 
 			<div>
-				<a href="#">
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/bmw.png" alt="BMW Link" width="282" height="42">
 						<figcaption> BMW </figcaption>
@@ -44,7 +65,7 @@
 			</div>
 
 			<div>
-				<a href="#">
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/ferrari.png" alt="Ferrari Link" width="282" height="42">
 						<figcaption> Ferrari </figcaption>
@@ -53,7 +74,7 @@
 			</div>
 
 			<div>
-				<a href="#">
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/lamb.png" alt="Lamb Link" width="282" height="42">
 						<figcaption> Lamborghini </figcaption>
@@ -62,7 +83,7 @@
 			</div>
 
 			<div>
-				<a href="#">
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/mercedes.png" alt="Mercedes Link" width="282" height="42">
 						<figcaption> Mercedes </figcaption>
@@ -71,7 +92,8 @@
 			</div>
 
 			<div>
-				<a href="brand.php">
+
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/porsche.png" alt="Porsche Link" width="282" height="42">
 						<figcaption> Porsche </figcaption>
@@ -80,7 +102,7 @@
 			</div>
 
 			<div>
-				<a href="#">
+				<a href="brand.php?brand=">
 					<figure class="shine">
 						<img src="graphics/tesla.png" alt="Tesla Link" width="282" height="42">
 						<figcaption> Tesla </figcaption>
@@ -88,9 +110,7 @@
 				</a>
 			</div>
 
-		</div>
-
-		
+		</div>	 -->
 
 	</body>
 </html>

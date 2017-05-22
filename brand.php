@@ -1,3 +1,21 @@
+<?php
+
+  include('connect.inc.php');
+
+  // Step 2: Preform Database Query
+  $query = "SELECT * FROM cars" WHERE brand = _GET('brand');
+  $result = mysqli_query($connection, $query);
+  // Check there are no errors with our SQL statement
+  if (!$result) {
+    die ("Database query failed.");
+  }
+
+ ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html class="bg" lang="en">
 	<head>
@@ -32,10 +50,10 @@
 
 			<div class="header_desktop_1">
 				<div class="home">
-					<a class="nav" href="index.html">Home</a>
+					<a class="nav" href="index.php">Home</a>
 				</div>
 				<div>
-					<a class="nav" href="company.php">Company</a>
+					<a class="nav" href="company.php?description=<?php echo $brand; ?>">Company</a>
 				</div>
 				<div>					
 					<a class="nav" href="videos.php">Videos</a>
@@ -50,7 +68,7 @@
 
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="index.html">Home</a>
+			  <a href="index.php">Home</a>
 			  <a href="company.php">Company</a>
 			  <a href="videos.php">Videos</a>
 			  <a href="pics.php">Pictures</a>
