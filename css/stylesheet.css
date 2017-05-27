@@ -489,7 +489,35 @@ figcaption {
   padding: 15px 0 0 0; }
 
 .bg {
+  background: url(../graphics/audi_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_1 {
+  background: url(../graphics/aston_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_2 {
+  background: url(../graphics/bmw_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_3 {
+  background: url(../graphics/ferrari_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_4 {
+  background: url(../graphics/lamb_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_5 {
+  background: url(../graphics/mercedes_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_6 {
   background: url(../graphics/porsche_bg.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.bg_7 {
+  background: url(../graphics/tesla_bg.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 .wrapper {

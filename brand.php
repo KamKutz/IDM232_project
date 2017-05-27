@@ -3,13 +3,23 @@
   include('connect.inc.php');
 
   // Step 2: Preform Database Query
-  $query = "SELECT * FROM cars" WHERE brand = _GET('brand');
+  $query = "SELECT * FROM cars";
+  // WHERE brand =$_GET('brand')
   $result = mysqli_query($connection, $query);
   // Check there are no errors with our SQL statement
   if (!$result) {
     die ("Database query failed.");
   }
 
+	while ($row = mysqli_fetch_array($result)) {
+
+		    if (isset($_GET['bg_picture'])) {
+   		    $class = $_GET['bg_picture'];
+  		}
+
+		// $pic_swap = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
+		// echo $pic_swap; 
+	};
  ?>
 
 
@@ -17,7 +27,14 @@
 
 
 <!DOCTYPE html>
-<html class="bg" lang="en">
+<?php  
+    if (isset($class)) {
+      echo "<html class=\"$class\" lang=\"en\">";
+    } else {
+      echo "<html lang=\"en\">";
+    }
+// <html class=\"$class\" lang="en">
+?>
 	<head>
 		<meta name="viewport"
 		content="initial-scale=1.0,
@@ -31,7 +48,6 @@
 	</head>
 	
 	<body>
-
 			<div class="header_1">
 				<div class="title">
 					<h1 class="brand_title">Porsche 911 Turbo</h1>
