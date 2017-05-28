@@ -45,10 +45,24 @@
 			
 			<div>
 				<?php 
-					while ($row = mysqli_fetch_array($result)) {
-					$build = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
+
+					$url_page = "brand.php";
+					$param   = $row['brand'];
+
+					$url = rawurlencode($url_page);
+					$url .= "?" . "brand=" . urlencode($param);
+
+					while ($row = mysqli_fetch_assoc($result)) {
+					$build = "<a href=\"{$url}\">";
+					$build .= "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
 					echo $build;
 				};
+
+
+				// 	while ($row = mysqli_fetch_assoc($result)) {
+				// 	$build = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
+				// 	echo $build;
+				// };
 				?>
  <!-- 					<a href="brand.php?brand=">
 						<figure class="shine">

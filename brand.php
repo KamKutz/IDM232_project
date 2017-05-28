@@ -3,7 +3,8 @@
   include('connect.inc.php');
 
   // Step 2: Preform Database Query
-  $query = "SELECT * FROM cars";
+  // $query = "SELECT * FROM cars";
+     $query = "SELECT * FROM cars WHERE brand = {$brand} LIMIT 1";
   // WHERE brand =$_GET('brand')
   $result = mysqli_query($connection, $query);
   // Check there are no errors with our SQL statement
@@ -11,10 +12,10 @@
     die ("Database query failed.");
   }
 
-	while ($row = mysqli_fetch_array($result)) {
+	while ($row = mysqli_fetch_assoc($result)) {
 
-		    if (isset($_GET['bg_picture'])) {
-   		    $class = $_GET['bg_picture'];
+		 if (isset($_GET['brand'))
+  		  	$brand = $_GET['brand'];
   		}
 
 		// $pic_swap = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
