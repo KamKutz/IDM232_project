@@ -3,9 +3,28 @@
   include('connect.inc.php');
 
   // Step 2: Preform Database Query
-  // $query = "SELECT * FROM cars";
-     $query = "SELECT * FROM cars WHERE brand = {$brand} LIMIT 1";
-  // WHERE brand =$_GET('brand')
+
+    if (isset($_GET['bg_picture'])) {
+    $class = $_GET['bg_picture'];
+  }
+
+     if (isset($_GET['phrase_1'])) {
+    $phrase = $_GET['phrase_1'];
+    $phrase .= $_GET['phrase_2'];
+  }
+
+  if (isset($_GET['brand']))
+  $brand = $_GET['brand'];
+  }
+
+
+  
+  $query = "SELECT * FROM cars WHERE brand = {$brand} LIMIT 1";
+  // $query = "SELECT * FROM cars WHERE bg_picture = {$class} LIMIT 1";
+  // $query = "SELECT * FROM cars WHERE phrase_1 = {$phrase} LIMIT 1";
+  // $query = "SELECT * FROM cars WHERE phrase_2 = {$phrase} LIMIT 1";
+
+
   $result = mysqli_query($connection, $query);
   // Check there are no errors with our SQL statement
   if (!$result) {
@@ -14,12 +33,7 @@
 
 	while ($row = mysqli_fetch_assoc($result)) {
 
-		 if (isset($_GET['brand'))
-  		  	$brand = $_GET['brand'];
-  		}
 
-		// $pic_swap = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
-		// echo $pic_swap; 
 	};
  ?>
 
@@ -51,7 +65,16 @@
 	<body>
 			<div class="header_1">
 				<div class="title">
-					<h1 class="brand_title">Porsche 911 Turbo</h1>
+					<?php 
+
+					    if (isset($brand)) {
+					      echo "<h1 class=\"brand_title\">" . $row['brand'] . "</h1>" ;
+					    } else {
+					      echo "<h1 class=\"brand_title\">" . "</h1>";
+					    }	
+
+					 ?>
+					<!-- 	<h1 class="brand_title">Porsche 911 Turbo</h1> -->
 				</div>
 				<div class="left_nav">
 					<a href="#">
@@ -99,7 +122,16 @@
 			</div>
 
 			<div class="slogan">
-				<p>Shaping the future of the <br> sportscar, Strategy 2025</p>
+				<?php 
+
+					 if (isset($phrase)) {
+					      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
+					    } else {
+					      echo "<p class=\"brand_title\">" . "</p>";
+					    }	
+
+				 ?>
+					<!-- <p>Shaping the future of the <br> sportscar, Strategy 2025</p> -->
 			</div>
 
 
