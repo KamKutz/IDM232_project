@@ -16,10 +16,8 @@
   if (isset($_GET['brand'])) {
   $brand = $_GET['brand'];
   }
-
-
   
-  $query = "SELECT * FROM cars WHERE brand = {$brand} LIMIT 1";
+  $query = "SELECT * FROM cars WHERE brand = '{$brand}' LIMIT 1";
 
   $result = mysqli_query($connection, $query);
   // Check there are no errors with our SQL statement
@@ -28,7 +26,9 @@
   }
 
 	while ($row = mysqli_fetch_assoc($result)) {
-
+		 // echo $result['brand'];
+		 // echo $result['class'];
+		 // echo $result['phrase'];
 	};
  ?>
 
