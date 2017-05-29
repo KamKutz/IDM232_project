@@ -4,18 +4,18 @@
 
   // Step 2: Preform Database Query
 
-    if (isset($_GET['bg_picture'])) {
-    $class = $_GET['bg_picture'];
-  }
+  //   if (isset($_GET['bg_picture'])) {
+  //   $class = $_GET['bg_picture'];
+  // }
 
-     if (isset($_GET['phrase_1'])) {
-    $phrase = $_GET['phrase_1'];
-    $phrase .= $_GET['phrase_2'];
-  }
+  //    if (isset($_GET['phrase_1'])) {
+  //   $phrase = $_GET['phrase_1'];
+  //   $phrase .= $_GET['phrase_2'];
+  // }
 
-  if (isset($_GET['brand']))
-  $brand = $_GET['brand'];
-  }
+  // if (isset($_GET['brand'])) {
+  // $brand = $_GET['brand'];
+  // }
 
 
   
@@ -33,7 +33,6 @@
 
 	while ($row = mysqli_fetch_assoc($result)) {
 
-
 	};
  ?>
 
@@ -43,11 +42,11 @@
 
 <!DOCTYPE html>
 <?php  
-    if (isset($class)) {
-      echo "<html class=\"$class\" lang=\"en\">";
-    } else {
-      echo "<html lang=\"en\">";
-    }
+    // if (isset($class)) {
+    //   echo "<html class=\"$class\" lang=\"en\">";
+    // } else {
+    //   echo "<html lang=\"en\">";
+    // }
 // <html class=\"$class\" lang="en">
 ?>
 	<head>
@@ -67,11 +66,11 @@
 				<div class="title">
 					<?php 
 
-					    if (isset($brand)) {
-					      echo "<h1 class=\"brand_title\">" . $row['brand'] . "</h1>" ;
-					    } else {
-					      echo "<h1 class=\"brand_title\">" . "</h1>";
-					    }	
+					    // if (isset($brand)) {
+					    //   echo "<h1 class=\"brand_title\">" . $row['brand'] . "</h1>" ;
+					    // } else {
+					    //   echo "<h1 class=\"brand_title\">" . "</h1>";
+					    // }	
 
 					 ?>
 					<!-- 	<h1 class="brand_title">Porsche 911 Turbo</h1> -->
@@ -124,11 +123,11 @@
 			<div class="slogan">
 				<?php 
 
-					 if (isset($phrase)) {
-					      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
-					    } else {
-					      echo "<p class=\"brand_title\">" . "</p>";
-					    }	
+					 // if (isset($phrase)) {
+					 //      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
+					 //    } else {
+					 //      echo "<p class=\"brand_title\">" . "</p>";
+					 //    }	
 
 				 ?>
 					<!-- <p>Shaping the future of the <br> sportscar, Strategy 2025</p> -->
