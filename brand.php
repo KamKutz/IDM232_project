@@ -1,20 +1,23 @@
 <?php
 
-  include('connect.inc.php');
+  require_once 'connect.inc.php';
+  // include('connect.inc.php');
 
   // Step 2: Preform Database Query
 
-    if (isset($_GET['bg_picture'])) {
-    $class = $_GET['bg_picture'];
-  }
+  //   if (isset($_GET['bg_picture'])) {
+  //   $class = $_GET['bg_picture'];
+  // }
 
-     if (isset($_GET['phrase_1'])) {
-    $phrase = $_GET['phrase_1'];
-    $phrase .= $_GET['phrase_2'];
-  }
+  //    if (isset($_GET['phrase_1'])) {
+  //   $phrase = $_GET['phrase_1'];
+  //   $phrase .= $_GET['phrase_2'];
+  // }
 
   if (isset($_GET['brand'])) {
   $brand = $_GET['brand'];
+  } else {
+  	header("Location: http://kamkutz.com/idm232/IDM232_project/");
   }
   
   $query = "SELECT * FROM cars WHERE brand = '{$brand}' LIMIT 1";
@@ -26,9 +29,9 @@
   }
 
 	while ($row = mysqli_fetch_assoc($result)) {
-		 // echo $result['brand'];
-		 // echo $result['class'];
-		 // echo $result['phrase'];
+		 echo $row['brand'];
+		 echo $row['class'];
+		 echo $row['phrase'];
 	};
  ?>
 
@@ -37,6 +40,7 @@
 
 
 <!DOCTYPE html>
+
 <?php  
     if (isset($class)) {
       echo "<html class=\"$class\" lang=\"en\">";
