@@ -5,15 +5,6 @@
 
   // Step 2: Preform Database Query
 
-  //   if (isset($_GET['bg_picture'])) {
-  //   $class = $_GET['bg_picture'];
-  // }
-
-  //    if (isset($_GET['phrase_1'])) {
-  //   $phrase = $_GET['phrase_1'];
-  //   $phrase .= $_GET['phrase_2'];
-  // }
-
   if (isset($_GET['brand'])) {
   $brand = $_GET['brand'];
   } else {
@@ -21,6 +12,7 @@
   }
   
   $query = "SELECT * FROM cars WHERE brand = '{$brand}' LIMIT 1";
+  //  Select everything from cars where brand is what I got up top where the Limit is 1 so I only see 1 car at a time 
 
   $result = mysqli_query($connection, $query);
   // Check there are no errors with our SQL statement
@@ -29,11 +21,26 @@
   }
 
 	while ($row = mysqli_fetch_assoc($result)) {
-		 echo $row['brand'];
-		 echo $row['class'];
-		 echo $row['phrase'];
+	        $bg_picture = $row['bg_picture'];
+	        $brand = $row['brand'];
+	        $phrase_1 = $row['phrase_1'];
+	        $phrase_2 = $row['phrase_2'];
+	        // Want to see everything available? Uncomment these lines for some debug info:
+	        // echo "<pre>";
+	        // print_r($row);
+	        // echo "</pre>";
+	        	$url_page_1 = "company.php";
+		$param_1   = $row['id'];
+
+		$url_1 = rawurlencode($url_page_1);
+		$url_1 .= "?" . "id=" . urlencode($param_1);
 	};
+
+	mysqli_free_result($result);
+
+
  ?>
+
 
 
 
@@ -41,14 +48,7 @@
 
 <!DOCTYPE html>
 
-<?php  
-    if (isset($class)) {
-      echo "<html class=\"$class\" lang=\"en\">";
-    } else {
-      echo "<html lang=\"en\">";
-    }
-// <html class=\"$class\" lang="en">
-?>
+<html class="<?php echo $bg_picture; ?> " lang="en">
 	<head>
 		<meta name="viewport"
 		content="initial-scale=1.0,
@@ -61,19 +61,14 @@
 		<title>Sportscar Brand</title>
 	</head>
 	
-	<body>
+
+	
+
+	<body class="">
+
 			<div class="header_1">
 				<div class="title">
-					<?php 
-
-					    if (isset($brand)) {
-					      echo "<h1 class=\"brand_title\">" . $row['brand'] . "</h1>" ;
-					    } else {
-					      echo "<h1 class=\"brand_title\">" . "</h1>";
-					    }	
-
-					 ?>
-					<!-- 	<h1 class="brand_title">Porsche 911 Turbo</h1> -->
+					<h1 class="brand_title"> <?php echo $brand; ?></h1>
 				</div>
 				<div class="left_nav">
 					<a href="#">
@@ -92,7 +87,7 @@
 					<a class="nav" href="index.php">Home</a>
 				</div>
 				<div>
-					<a class="nav" href="company.php?description=<?php echo $brand; ?>">Company</a>
+					<a class="nav" href="<?php echo $url_1 ?>">Company</a>
 				</div>
 				<div>					
 					<a class="nav" href="videos.php">Videos</a>
@@ -123,16 +118,17 @@
 			<div class="slogan">
 				<?php 
 
-					 if (isset($phrase)) {
-					      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
-					    } else {
-					      echo "<p class=\"brand_title\">" . "</p>";
-					    }	
+					 // if (isset($phrase)) {
+					 //      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
+					 //    } else {
+					 //      echo "<p class=\"brand_title\">" . "</p>";
+					 //    }	
 
 				 ?>
-					<!-- <p>Shaping the future of the <br> sportscar, Strategy 2025</p> -->
+					<p><?php echo $phrase_1; ?> <br> <?php echo $phrase_2; ?></p>
 			</div>
-
+    			
+    			<?php mysqli_close($connection); ?>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

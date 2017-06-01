@@ -1,7 +1,6 @@
 <?php
 
-  include('connect.inc.php');
-  // include('arrays.php');
+  require_once ('connect.inc.php');
 
   // Step 2: Preform Database Query
   $query = "SELECT * FROM cars";
@@ -57,7 +56,9 @@
 					$build = "<a href=\"{$url}\">";
 					$build .= "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
 					echo $build;
+
 				};
+				mysqli_free_result($result);
 
 
 				// 	while ($row = mysqli_fetch_assoc($result)) {
@@ -72,7 +73,8 @@
 						</figure>
 					</a> -->
 			</div>
-			
+
+			  <?php mysqli_close($connection); ?>
 
 	</body>
 </html>

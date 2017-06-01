@@ -10,9 +10,28 @@
     die ("Database query failed.");
   }
 
-if (isset($_GET['description'])) {
-	
-}
+  if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+  } else {
+  	header("Location: http://kamkutz.com/idm232/IDM232_project/");
+  }
+
+  $query = "SELECT * FROM cars WHERE id = '{$id}' LIMIT 1";
+
+	while ($row = mysqli_fetch_assoc($result)) {
+	        $desc = $row['description'];
+	        // Want to see everything available? Uncomment these lines for some debug info:
+	        // echo "<pre>";
+	        // print_r($row);
+	        // echo "</pre>";
+	        	$url_page_1 = "company.php";
+		$param_1   = $row['id'];
+
+		$url_1 = rawurlencode($url_page_1);
+		$url_1 .= "?" . "id=" . urlencode($param_1);
+	};
+
+    	mysqli_free_result($result);
 
  ?>
 
@@ -79,7 +98,7 @@ if (isset($_GET['description'])) {
 
 		<div class="white_contain">
 			<div class="white_box">
-				<p>	Shaping the future of the sportscar this is the theme of Strategy 2025. At the heart of the strategy is our future product portfolio. The sportscar of the future will blend the history and values of the Porsche brand with innovative technologies, while at the same time ensuring sustainability. In achieving this, topics such as electromobility, digitalisation and connectivity will play an important role. Embracing these topics will allow us to shape the exclusive and sporty mobility of tomorrow. Nevertheless, with all the innovations and modifications in front of us, one thing remains constant: Anything that carries the Porsche crest will also feature the excellent quality that is synonymous with Porsche.</p>
+				<p><?php echo $desc; ?></p>
 			</div>
 		</div>
 
@@ -95,6 +114,8 @@ if (isset($_GET['description'])) {
 				<h5>Website</h5>
 			</div>
 		</div>
+
+		<?php mysqli_close($connection); ?>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
