@@ -1,3 +1,75 @@
+<?php
+
+  include('connect.inc.php');
+
+  if (isset($_GET['id'])) {
+  $id = $_GET['id'];
+  } else {
+  	header("Location: http://kamkutz.com/idm232/IDM232_project/");
+  }
+
+  // Step 2: Preform Database Query
+  $query = "SELECT * FROM cars WHERE id = '{$id}' LIMIT 1";
+
+  $result = mysqli_query($connection, $query);
+    // Check there are no errors with our SQL statement
+
+    if (!$result) {
+    die ("Database query failed.");
+  }
+
+	while ($row = mysqli_fetch_assoc($result)) {
+	        $brand = $row['brand'];
+	        $pic_1 = $row['picture_1'];
+	        $pic_2 = $row['picture_2'];
+	        $pic_3 = $row['picture_3'];
+	        $pic_4 = $row['picture_4'];	
+	        $pic_5 = $row['picture_5'];
+	        $pic_6 = $row['picture_6'];	        	                	        
+	        // Want to see everything available? Uncomment these lines for some debug info:
+	        // echo "<pre>";
+	        // print_r($row);
+	        // echo "</pre>";
+	        	$url_page_1 = "company.php";
+		$param_1   = $row['id'];
+
+		$url_1 = rawurlencode($url_page_1);
+		$url_1 .= "?" . "id=" . urlencode($param_1);
+
+	        	$url_page_2 = "videos.php";
+		$param_2   = $row['id'];
+
+		$url_2 = rawurlencode($url_page_2);
+		$url_2 .= "?" . "id=" . urlencode($param_2);
+
+		$url_page_3 = "pics.php";
+		$param_3   = $row['id'];
+
+		$url_3 = rawurlencode($url_page_3);
+		$url_3 .= "?" . "id=" . urlencode($param_3);
+
+		$url_page_4 = "stats.php";
+		$param_4   = $row['id'];
+
+		$url_4 = rawurlencode($url_page_4);
+		$url_4 .= "?" . "id=" . urlencode($param_4);
+	};
+
+    	mysqli_free_result($result);
+
+ ?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -29,7 +101,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_1.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_1; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -48,7 +120,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_2.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_2; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -67,7 +139,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_3.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_3; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -86,7 +158,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_4.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_4; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -105,7 +177,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_5.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_5; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -124,7 +196,7 @@
 						</div>
 					</a>
 				</div>
-				<img src="graphics/porsche_6.jpg" alt="Porsche Picture">
+				<img src="<?php echo $pic_6; ?>" alt="Porsche Picture">
 			</div>
 		</div>
 
@@ -135,7 +207,7 @@
 		
 		<div class="header_1">
 			<div class="title">
-				<h1 class="brand_title">Porsche 911 Turbo</h1>
+				<h1 class="brand_title"><?php echo $brand; ?></h1>
 			</div>
 			<div class="left_nav">
 				<a href="#">
@@ -154,26 +226,26 @@
 				<a class="nav" href="index.php">Home</a>
 			</div>
 			<div>
-				<a class="nav" href="company.php">Company</a>
+				<a class="nav" href="<?php echo $url_1; ?>">Company</a>
 			</div>
 			<div>					
-				<a class="nav" href="videos.php">Videos</a>
+				<a class="nav" href="<?php echo $url_2; ?>">Videos</a>
 			</div>
 			<div>
-				<a class="nav" href="pics.php">Pictures</a>
+				<a class="nav" href="<?php echo $url_3; ?>">Pictures</a>
 			</div>
 			<div class="stats">
-				<a class="nav" href="stats.php">Stats</a>
+				<a class="nav" href="<?php echo $url_4; ?>">Stats</a>
 			</div>
 		</div>
 
 		<div id="mySidenav" class="sidenav">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		  <a href="index.php">Home</a>
-		  <a href="company.php">Company</a>
-		  <a href="videos.php">Videos</a>
-		  <a href="pics.php">Pictures</a>
-		  <a href="stats.php">Stats</a>
+		  <a href="<?php echo $url_1; ?>">Company</a>
+		  <a href="<?php echo $url_2; ?>">Videos</a>
+		  <a href="<?php echo $url_3; ?>">Pictures</a>
+		  <a href="<?php echo $url_4; ?>">Stats</a>
 		</div>
 
 		<div class="hamb_wrap">
@@ -185,37 +257,37 @@
 		<div class="pic_wrap">
 			<div>
 				<a href="#popup1">
-					<img src="graphics/porsche_1.jpg" alt="Porsche Pic-1">
+					<img src="<?php echo $pic_1; ?>" alt="Porsche Pic-1">
 				</a>
 			</div>
 			<div>
 				<a href="#popup2">
-					<img src="graphics/porsche_2.jpg" alt="Porsche Pic-2">
+					<img src="<?php echo $pic_2; ?>" alt="Porsche Pic-2">
 				</a>
 			</div>
 			<div>
 				<a href="#popup3">
-					<img src="graphics/porsche_3.jpg" alt="Porsche Pic-3">
+					<img src="<?php echo $pic_3; ?>" alt="Porsche Pic-3">
 				</a>
 			</div>
 			<div>
 				<a href="#popup4">
-					<img src="graphics/porsche_4.jpg" alt="Porsche Pic-4">
+					<img src="<?php echo $pic_4; ?>" alt="Porsche Pic-4">
 				</a>
 			</div>
 			<div>
 				<a href="#popup5">
-					<img src="graphics/porsche_5.jpg" alt="Porsche Pic-5">
+					<img src="<?php echo $pic_5; ?>" alt="Porsche Pic-5">
 				</a>
 			</div>
 			<div>
 				<a href="#popup6">
-					<img src="graphics/porsche_6.jpg" alt="Porsche Pic-6">
+					<img src="<?php echo $pic_6; ?>" alt="Porsche Pic-6">
 				</a>
 			</div>
 		</div>
 
-
+		<?php mysqli_close($connection); ?>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

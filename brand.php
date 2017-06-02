@@ -34,6 +34,24 @@
 
 		$url_1 = rawurlencode($url_page_1);
 		$url_1 .= "?" . "id=" . urlencode($param_1);
+
+	        	$url_page_2 = "videos.php";
+		$param_2   = $row['id'];
+
+		$url_2 = rawurlencode($url_page_2);
+		$url_2 .= "?" . "id=" . urlencode($param_2);
+
+		$url_page_3 = "pics.php";
+		$param_3   = $row['id'];
+
+		$url_3 = rawurlencode($url_page_3);
+		$url_3 .= "?" . "id=" . urlencode($param_3);
+
+		$url_page_4 = "stats.php";
+		$param_4   = $row['id'];
+
+		$url_4 = rawurlencode($url_page_4);
+		$url_4 .= "?" . "id=" . urlencode($param_4);
 	};
 
 	mysqli_free_result($result);
@@ -90,23 +108,23 @@
 					<a class="nav" href="<?php echo $url_1 ?>">Company</a>
 				</div>
 				<div>					
-					<a class="nav" href="videos.php">Videos</a>
+					<a class="nav" href="<?php echo $url_2 ?>">Videos</a>
 				</div>
 				<div>
-					<a class="nav" href="pics.php">Pictures</a>
+					<a class="nav" href="<?php echo $url_3; ?>">Pictures</a>
 				</div>
 				<div class="stats">
-					<a class="nav" href="stats.php">Stats</a>
+					<a class="nav" href="<?php echo $url_4; ?>">Stats</a>
 				</div>
 			</div>
 
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="index.php">Home</a>
-			  <a href="company.php">Company</a>
-			  <a href="videos.php">Videos</a>
-			  <a href="pics.php">Pictures</a>
-			  <a href="stats.php">Stats</a>
+			  <a href="<?php echo $url_1; ?>">Company</a>
+			  <a href="<?php echo $url_2; ?>">Videos</a>
+			  <a href="<?php echo $url_3; ?>">Pictures</a>
+			  <a href="<?php echo $url_4; ?>">Stats</a>
 			</div>
 			
 			<div class="hamb_wrap">

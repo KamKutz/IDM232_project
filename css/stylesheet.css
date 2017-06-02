@@ -49,6 +49,46 @@
   height: 30px;
   background-color: #BBA815; }
 
+.p_bar_audi {
+  width: 30px;
+  height: 30px;
+  background-color: #E21D38; }
+
+.p_bar_aston {
+  width: 30px;
+  height: 30px;
+  background-color: #1B774E; }
+
+.p_bar_bmw {
+  width: 30px;
+  height: 30px;
+  background-color: #0049BC; }
+
+.p_bar_ferrari {
+  width: 30px;
+  height: 30px;
+  background-color: #D2C708; }
+
+.p_bar_lamb {
+  width: 30px;
+  height: 30px;
+  background-color: #F6C441; }
+
+.p_bar_mercedes {
+  width: 30px;
+  height: 30px;
+  background-color: #AFB2B2; }
+
+.p_bar_porsche {
+  width: 30px;
+  height: 30px;
+  background-color: #BBA815; }
+
+.p_bar_tesla {
+  width: 30px;
+  height: 30px;
+  background-color: #E31937; }
+
 .b_bar_2 {
   width: 30px;
   height: 30px;
@@ -96,6 +136,54 @@ progress {
 .skill_2 progress::-moz-progress-bar {
   background: #BBA815; }
 
+.skill_2_audi progress::-webkit-progress-value {
+  background: #E21D38; }
+
+.skill_2_audi progress::-moz-progress-bar {
+  background: #E21D38; }
+
+.skill_2_aston progress::-webkit-progress-value {
+  background: #1B774E; }
+
+.skill_2_aston progress::-moz-progress-bar {
+  background: #1B774E; }
+
+.skill_2_bmw progress::-webkit-progress-value {
+  background: #0049BC; }
+
+.skill_2_bmw progress::-moz-progress-bar {
+  background: #0049BC; }
+
+.skill_2_ferrari progress::-webkit-progress-value {
+  background: #D2C708; }
+
+.skill_2_ferrari progress::-moz-progress-bar {
+  background: #D2C708; }
+
+.skill_2_lamb progress::-webkit-progress-value {
+  background: #F6C441; }
+
+.skill_2_lamb progress::-moz-progress-bar {
+  background: #F6C441; }
+
+.skill_2_mercedes progress::-webkit-progress-value {
+  background: #AFB2B2; }
+
+.skill_2_mercedes progress::-moz-progress-bar {
+  background: #AFB2B2; }
+
+.skill_2_porsche progress::-webkit-progress-value {
+  background: #BBA815; }
+
+.skill_2_porsche progress::-moz-progress-bar {
+  background: #BBA815; }
+
+.skill_2_tesla progress::-webkit-progress-value {
+  background: #E31937; }
+
+.skill_2_tesla progress::-moz-progress-bar {
+  background: #E31937; }
+
 .skill-list {
   list-style: none;
   margin: 0;
@@ -127,6 +215,110 @@ progress {
     position: absolute;
     top: .65em; }
 
+.skill_2_audi {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_audi h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_aston {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_aston h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_bmw {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_bmw h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_ferrari {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_ferrari h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_lamb {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_lamb h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_mercedes {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_mercedes h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_porsche {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_porsche h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
+.skill_2_tesla {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(0.26, 0.61, 0.79, 1.19); }
+  .skill_2_tesla h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em; }
+
 @keyframes progressBar {
   0% {
     width: 0; }
@@ -145,13 +337,41 @@ progress {
     .data li {
       padding: 10px 0 0 30px; } }
 
-.comp_bg {
-  background: url(../graphics/porsche_comp.jpg) no-repeat center center fixed;
+.comp_audi {
+  background: url(../graphics/audi_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_aston {
+  background: url(../graphics/aston_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_bmw {
+  background: url(../graphics/bmw_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_ferrari {
+  background: url(../graphics/ferrari_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_lamb {
+  background: url(../graphics/lamb_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_mercedes {
+  background: url(../graphics/mercedes_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_porsche {
+  background: url(../graphics/porsche_company.jpg) no-repeat center center fixed;
+  background-size: cover; }
+
+.comp_tesla {
+  background: url(../graphics/tesla_company.jpg) no-repeat center center fixed;
   background-size: cover; }
 
 .white_box {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   margin: 170px 0 0 0;
   position: absolute; }
   .white_box p {
@@ -172,7 +392,7 @@ progress {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 485px 0 0 0; }
+  margin: 420px 0 0 0; }
   .website div {
     border: solid 3px white;
     height: 50px; }
@@ -188,7 +408,7 @@ progress {
   .white_box {
     width: 70%; }
   .website {
-    margin: 600px 0 0 0; }
+    margin: 500px 0 0 0; }
   .white_contain {
     display: flex;
     justify-content: center;
@@ -200,7 +420,7 @@ progress {
     .white_box p {
       font-size: 18px; }
   .website {
-    margin: 600px 0 0 0; } }
+    margin: 525px 0 0 0; } }
 
 .contain_vid {
   display: flex;
