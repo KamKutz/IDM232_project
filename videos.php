@@ -23,6 +23,8 @@
 	        $vids_2 = $row['video_2'];
 	        $brand = $row['brand'];
 	        $review = $row['review'];
+	        $vid_desc_1 = $row['vid_desc_1'];
+	        $vid_desc_2 = $row['vid_desc_2'];
 	        // Want to see everything available? Uncomment these lines for some debug info:
 	        // echo "<pre>";
 	        // print_r($row);
@@ -135,14 +137,14 @@
 					<h3><?php echo $review; ?></h3>
 				</div>
 				<iframe src="<?php echo $vids_1; ?>"></iframe>
-				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorem quas quidem laborum non! Porro voluptate possimus nulla aspernatur doloribus harum. Autem doloribus quaerat impedit at, reiciendis ab eum, aperiam?</p>
+				<p><?php echo $vid_desc_1; ?></p>
 			</div>
 			<div>
 				<div class="h3_wrap">	
 					<h3><?php echo $review; ?></h3>
 				</div>
 				<iframe src="<?php echo $vids_2; ?>"></iframe>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorem quas quidem laborum non! Porro voluptate possimus nulla aspernatur doloribus harum. Autem doloribus quaerat impedit at, reiciendis ab eum, aperiam?</p>
+				<p><?php echo $vid_desc_2; ?></p>
 			</div>
 		</div>
 
