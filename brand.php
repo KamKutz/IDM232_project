@@ -134,15 +134,6 @@
 			</div>
 
 			<div class="slogan">
-				<?php 
-
-					 // if (isset($phrase)) {
-					 //      echo "<p class=\"brand_title\">" . $row['phrase_1'] . "<br>" . $row['phrase_2'] . "</p>" ;
-					 //    } else {
-					 //      echo "<p class=\"brand_title\">" . "</p>";
-					 //    }	
-
-				 ?>
 					<p><?php echo $phrase_1; ?> <br> <?php echo $phrase_2; ?></p>
 			</div>
     			
