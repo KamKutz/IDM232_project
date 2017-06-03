@@ -445,7 +445,8 @@ progress {
   .contain_vid p {
     font-family: 'Abel', sans-serif;
     color: white;
-    max-width: 400px; }
+    max-width: 400px;
+    padding: 0 1.5rem; }
   .contain_vid h3 {
     font-family: 'Poiret One', cursive;
     color: white;
@@ -467,7 +468,8 @@ progress {
       height: 400px; }
     .contain_vid p {
       max-width: 600px;
-      margin-left: 45px; }
+      margin-left: 45px;
+      padding: 0 1rem; }
     .contain_vid h3 {
       font-size: 25px;
       max-width: 400px;
