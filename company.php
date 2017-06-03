@@ -22,6 +22,7 @@
 	        $desc = $row['description'];
 	        $brand = $row['brand'];
 	        $company = $row['company'];
+	        $website = $row['website'];
 	        // Want to see everything available? Uncomment these lines for some debug info:
 	        // echo "<pre>";
 	        // print_r($row);
@@ -131,7 +132,9 @@
 
 		<div class="website">
 			<div class="contain_web">
-				<h5>Website</h5>
+				<a href="<?php echo $website; ?>" target="_blank">
+					<h5>Website</h5>
+				</a>
 			</div>
 		</div>
 

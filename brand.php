@@ -25,10 +25,17 @@
 	        $brand = $row['brand'];
 	        $phrase_1 = $row['phrase_1'];
 	        $phrase_2 = $row['phrase_2'];
+	        $id = $row['id'];
 	        // Want to see everything available? Uncomment these lines for some debug info:
 	        // echo "<pre>";
 	        // print_r($row);
 	        // echo "</pre>";
+		$url_page = "brand.php";
+		$param   = $row['brand'];
+
+		$url = rawurlencode($url_page);
+		$url .= "?" . "brand=" . urlencode($param);
+
 	        	$url_page_1 = "company.php";
 		$param_1   = $row['id'];
 
@@ -89,12 +96,12 @@
 					<h1 class="brand_title"> <?php echo $brand; ?></h1>
 				</div>
 				<div class="left_nav">
-					<a href="#">
+					<a href="brand.php?brand=<?php echo $brand; ?>">
 						<img  class="left_arrow_s" src="graphics/left_arrow_s.png" alt="Left Arrow">
 					</a>
 				</div>
 				<div class="right_nav">
-					<a href="#">
+					<a href="brand.php?brand=<?php echo $brand; ?>">
 						<img class="right_arrow_s" src="graphics/right_arrow_s.png" alt="Right Arrow">
 					</a>
 				</div>

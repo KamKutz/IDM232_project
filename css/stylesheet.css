@@ -386,6 +386,8 @@ progress {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .contain_web a {
+    text-decoration: none; }
 
 .website {
   width: 100%;
