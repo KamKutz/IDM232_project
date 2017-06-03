@@ -131,12 +131,16 @@
 
 		<div class="contain_vid">
 			<div>
-				<h3><?php echo $review; ?></h3>
+				<div class="h3_wrap">
+					<h3><?php echo $review; ?></h3>
+				</div>
 				<iframe src="<?php echo $vids_1; ?>"></iframe>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorem quas quidem laborum non! Porro voluptate possimus nulla aspernatur doloribus harum. Autem doloribus quaerat impedit at, reiciendis ab eum, aperiam?</p>
 			</div>
 			<div>
-				<h3><?php echo $review; ?></h3>
+				<div class="h3_wrap">	
+					<h3><?php echo $review; ?></h3>
+				</div>
 				<iframe src="<?php echo $vids_2; ?>"></iframe>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolorem quas quidem laborum non! Porro voluptate possimus nulla aspernatur doloribus harum. Autem doloribus quaerat impedit at, reiciendis ab eum, aperiam?</p>
 			</div>

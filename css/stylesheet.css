@@ -443,6 +443,12 @@ progress {
     max-width: 400px;
     margin-left: 75px; }
 
+.h3_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 67%; }
+
 @media screen and (min-width: 768px) {
   .contain_vid {
     margin: 200px 0 0 0; }
@@ -471,11 +477,51 @@ progress {
       max-width: 400px;
       margin-left: 292px; } }
 
-.pic_wrap img {
+.pic_wrap .pic1 {
   width: 100%;
   margin: 30px 0 30px 0;
   opacity: 0;
-  animation: fadeIn 1s ease-in-out;
+  animation: fadeIn 1.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.pic_wrap .pic2 {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.pic_wrap .pic3 {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 4.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.pic_wrap .pic4 {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 6s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.pic_wrap .pic5 {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 7.5s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards; }
+
+.pic_wrap .pic6 {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  opacity: 0;
+  animation: fadeIn 9s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
 
@@ -525,6 +571,66 @@ progress {
       margin: 0; }
     .pic_wrap img:hover {
       filter: contrast(0.8) brightness(0.9); }
+  .pic_wrap .pic1 {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
+  .pic_wrap .pic2 {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
+  .pic_wrap .pic3 {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
+  .pic_wrap .pic4 {
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
+  .pic_wrap .pic5 {
+    opacity: 0;
+    animation: fadeIn 4.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
+  .pic_wrap .pic6 {
+    opacity: 0;
+    animation: fadeIn 4.5s ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    width: 446px;
+    height: auto;
+    max-height: 250px;
+    transition: 300ms all;
+    margin: 0; }
   .overlay {
     position: fixed;
     margin: 0 auto;

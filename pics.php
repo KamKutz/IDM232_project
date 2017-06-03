@@ -257,32 +257,32 @@
 		<div class="pic_wrap">
 			<div>
 				<a href="#popup1">
-					<img src="<?php echo $pic_1; ?>" alt="Porsche Pic-1">
+					<img class="pic1" src="<?php echo $pic_1; ?>" alt="Porsche Pic-1">
 				</a>
 			</div>
 			<div>
 				<a href="#popup2">
-					<img src="<?php echo $pic_2; ?>" alt="Porsche Pic-2">
+					<img class="pic2" src="<?php echo $pic_2; ?>" alt="Porsche Pic-2">
 				</a>
 			</div>
 			<div>
 				<a href="#popup3">
-					<img src="<?php echo $pic_3; ?>" alt="Porsche Pic-3">
+					<img class="pic3" src="<?php echo $pic_3; ?>" alt="Porsche Pic-3">
 				</a>
 			</div>
 			<div>
 				<a href="#popup4">
-					<img src="<?php echo $pic_4; ?>" alt="Porsche Pic-4">
+					<img class="pic4" src="<?php echo $pic_4; ?>" alt="Porsche Pic-4">
 				</a>
 			</div>
 			<div>
 				<a href="#popup5">
-					<img src="<?php echo $pic_5; ?>" alt="Porsche Pic-5">
+					<img class="pic5" src="<?php echo $pic_5; ?>" alt="Porsche Pic-5">
 				</a>
 			</div>
 			<div>
 				<a href="#popup6">
-					<img src="<?php echo $pic_6; ?>" alt="Porsche Pic-6">
+					<img class="pic6" src="<?php echo $pic_6; ?>" alt="Porsche Pic-6">
 				</a>
 			</div>
 		</div>
