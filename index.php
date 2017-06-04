@@ -34,11 +34,6 @@
 		<h1 class="greet_big"> Pick Your Luxury Car </h1>
 
 		<div class="wrapper">
-
-		<?php
-		        $url = rawurlencode("brand.php");
-		        $url .= "?" . "class=" . urlencode("bg");
-	     	 ?>
 		
 			
 			<div>
@@ -47,10 +42,10 @@
 					while ($row = mysqli_fetch_assoc($result)) {
 
 					$url_page = "brand.php";
-					$param   = $row['brand'];
+					$param   = $row['id'];
 
 					$url = rawurlencode($url_page);
-					$url .= "?" . "brand=" . urlencode($param);
+					$url .= "?" . "id=" . urlencode($param);
 
 
 					$build = "<a href=\"{$url}\">";

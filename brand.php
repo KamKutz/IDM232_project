@@ -5,13 +5,13 @@
 
   // Step 2: Preform Database Query
 
-  if (isset($_GET['brand'])) {
-  $brand = $_GET['brand'];
+  if (isset($_GET['id'])) {
+  $id = $_GET['id'];
   } else {
   	header("Location: http://kamkutz.com/idm232/IDM232_project/");
   }
   
-  $query = "SELECT * FROM cars WHERE brand = '{$brand}' LIMIT 1";
+  $query = "SELECT * FROM cars WHERE id = '{$id}' LIMIT 1";
   //  Select everything from cars where brand is what I got up top where the Limit is 1 so I only see 1 car at a time 
 
   $result = mysqli_query($connection, $query);
@@ -31,10 +31,10 @@
 	        // print_r($row);
 	        // echo "</pre>";
 		$url_page = "brand.php";
-		$param   = $row['brand'];
+		$param   = $row['id'];
 
 		$url = rawurlencode($url_page);
-		$url .= "?" . "brand=" . urlencode($param);
+		$url .= "?" . "id=" . urlencode($param);
 
 	        	$url_page_1 = "company.php";
 		$param_1   = $row['id'];
@@ -89,19 +89,23 @@
 
 	
 
-	<body class="">
+	<body>
 
 			<div class="header_1">
 				<div class="title">
-					<h1 class="brand_title"> <?php echo $brand; ?></h1>
+					<h1 class="brand_title"> <?php echo $brand; ?> </h1>
 				</div>
 				<div class="left_nav">
-					<a href="brand.php?brand=<?php echo $brand; ?>">
+					<a href="brand.php?id=<?php echo $id-1; 
+						if ($id==1) {
+							echo $id==8;
+						}
+					?>">
 						<img  class="left_arrow_s" src="graphics/left_arrow_s.png" alt="Left Arrow">
 					</a>
 				</div>
 				<div class="right_nav">
-					<a href="brand.php?brand=<?php echo $brand; ?>">
+					<a href="brand.php?id=<?php echo $id+1; ?>">
 						<img class="right_arrow_s" src="graphics/right_arrow_s.png" alt="Right Arrow">
 					</a>
 				</div>

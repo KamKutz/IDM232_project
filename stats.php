@@ -91,12 +91,12 @@
 				<h1 class="brand_title"><?php echo $brand; ?></h1>
 			</div>
 			<div class="left_nav">
-				<a href="#">
+				<a href="stats.php?id=<?php echo $id-1; ?>">
 					<img  class="left_arrow_s" src="graphics/left_arrow_s.png" alt="Left Arrow">
 				</a>
 			</div>
 			<div class="right_nav">
-				<a href="#">
+				<a href="stats.php?id=<?php echo $id+1; ?>">
 					<img class="right_arrow_s" src="graphics/right_arrow_s.png" alt="Right Arrow">
 				</a>
 			</div>
