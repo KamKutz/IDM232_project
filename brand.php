@@ -96,16 +96,28 @@
 					<h1 class="brand_title"> <?php echo $brand; ?> </h1>
 				</div>
 				<div class="left_nav">
-					<a href="brand.php?id=<?php echo $id-1; 
-						if ($id==1) {
-							echo $id==8;
-						}
+					<a href="brand.php?id=<?php 
+						if ($id > 1) {
+							echo $id-1;
+						}	elseif ($id==1) {
+							echo 8;
+						}	else {
+							echo $id;
+						}; 
 					?>">
 						<img  class="left_arrow_s" src="graphics/left_arrow_s.png" alt="Left Arrow">
 					</a>
 				</div>
 				<div class="right_nav">
-					<a href="brand.php?id=<?php echo $id+1; ?>">
+					<a href="brand.php?id=<?php 
+						if ($id < 8) {
+							echo $id+1;
+						}	elseif ($id==8) {
+							echo 1;
+						}	else {
+							echo $id;
+						}; 
+					?>">
 						<img class="right_arrow_s" src="graphics/right_arrow_s.png" alt="Right Arrow">
 					</a>
 				</div>
