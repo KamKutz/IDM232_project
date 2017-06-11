@@ -59,18 +59,6 @@
     	mysqli_free_result($result);
 
  ?>
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -182,7 +170,6 @@
 		</div>
 
 		<div class="pic_wrap">
-
 
 			<?php
 			  for ($count = 1; $count <= 6; $count++) {

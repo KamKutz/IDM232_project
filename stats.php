@@ -67,9 +67,6 @@
     	mysqli_free_result($result);
 
  ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>

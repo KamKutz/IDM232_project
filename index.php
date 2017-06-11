@@ -26,13 +26,9 @@
 	</head>
 	
 	<body>
-
 		<h1 class="greet"> Pick Your <br> Luxury Car </h1>
 		<h1 class="greet_big"> Pick Your Luxury Car </h1>
-
 		<div class="wrapper">
-		
-			
 			<div>
 				<?php 
 
@@ -51,12 +47,6 @@
 
 				};
 				mysqli_free_result($result);
-
-
-				// 	while ($row = mysqli_fetch_assoc($result)) {
-				// 	$build = '<a href="brand.php?brand='.$row['brand'].'">' . "<figure class='shine'>" . '<img src="'.$row['brand_picture'].'">' . "<figcaption>" . $row['brand']  . "</figcaption>" . "</figure>";
-				// 	echo $build;
-				// };
 				?>
  <!-- 					<a href="brand.php?brand=">
 						<figure class="shine">

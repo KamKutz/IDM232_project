@@ -65,12 +65,6 @@
 
 
  ?>
-
-
-
-
-
-
 <!DOCTYPE html>
 
 <html class="<?php echo $bg_picture; ?> " lang="en">
@@ -85,12 +79,7 @@
 		<meta charset="UTF-8">
 		<title>Sportscar Brand</title>
 	</head>
-	
-
-	
-
 	<body>
-
 			<div class="header_1">
 				<div class="title">
 					<h1 class="brand_title"> <?php echo $brand; ?> </h1>
@@ -161,7 +150,6 @@
 			</div>
     			
     			<?php mysqli_close($connection); ?>
-
 
 		<script
 		  src="http://code.jquery.com/jquery-3.2.1.min.js"

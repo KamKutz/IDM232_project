@@ -55,8 +55,6 @@
     	mysqli_free_result($result);
 
  ?>
-
-
 <!DOCTYPE html>
 <html class="<?php echo $company;?>" lang="en">
 	<head>
@@ -132,13 +130,11 @@
 		  <a href="<?php echo $url_4; ?>">Stats</a>
 		</div>
 
-
 		<div class="white_contain">
 			<div class="white_box">
 				<p><?php echo $desc; ?></p>
 			</div>
 		</div>
-
 
 		<div class="hamb_wrap">
 			<span class="hamburger" onclick="openNav()"><!-- &#9776; -->
