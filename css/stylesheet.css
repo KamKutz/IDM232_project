@@ -836,7 +836,8 @@ figcaption {
 .header_desktop_1 {
   display: none;
   font-family: 'Poiret One', cursive;
-  padding: 15px 0 0 0; }
+  padding: 15px 0 15px 0;
+  background-color: rgba(0, 0, 0, 0.45); }
 
 .bg {
   background: url(../graphics/audi_bg.jpg) no-repeat center center fixed;

@@ -20,6 +20,7 @@
 
 	while ($row = mysqli_fetch_assoc($result)) {
 	        $brand = $row['brand'];
+	        $brand_pic = $row['brand_pic'];
 	        $pic_1 = $row['picture_1'];
 	        $pic_2 = $row['picture_2'];
 	        $pic_3 = $row['picture_3'];
@@ -86,123 +87,33 @@
 	
 	<body>
 
-		<div id="popup1" class="overlay">
+		<?php
+		  for ($count = 1; $count <= 6; $count++) {
+		?>
+
+		<div id="popup<?php echo $count; ?>" class="overlay">
 			<div class="popup">
 				<a class="close" href="#">&times;</a>
 				<div class="contain_arrows">
-					<a href="#popup6">
+					<a href="#popup<?php echo $count-1; ?>">
 						<div class="left_next"> 
 							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
 						</div>
 					</a>
-					<a href="#popup2">
+					<a href="#popup<?php echo $count+1; ?>">
 						<div class="right_next">
 							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
 						</div>
 					</a>
 				</div>
-				<img src="<?php echo $pic_1; ?>" alt="Porsche Picture">
+				<img src="graphics/<?php echo $brand_pic; ?>_<?php echo $count; ?>.jpg" alt="<?php echo $brand; ?> Pic-<?php echo $count; ?>">
 			</div>
 		</div>
 
-		<div id="popup2" class="overlay">
-			<div class="popup">
-				<a class="close" href="#">&times;</a>
-				<div class="contain_arrows">
-					<a href="#popup1">
-						<div class="left_next"> 
-							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
-						</div>
-					</a>
-					<a href="#popup3">
-						<div class="right_next">
-							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
-						</div>
-					</a>
-				</div>
-				<img src="<?php echo $pic_2; ?>" alt="Porsche Picture">
-			</div>
-		</div>
-
-		<div id="popup3" class="overlay">
-			<div class="popup">
-				<a class="close" href="#">&times;</a>
-				<div class="contain_arrows">
-					<a href="#popup2">
-						<div class="left_next"> 
-							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
-						</div>
-					</a>
-					<a href="#popup4">
-						<div class="right_next">
-							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
-						</div>
-					</a>
-				</div>
-				<img src="<?php echo $pic_3; ?>" alt="Porsche Picture">
-			</div>
-		</div>
-
-		<div id="popup4" class="overlay">
-			<div class="popup">
-				<a class="close" href="#">&times;</a>
-				<div class="contain_arrows">
-					<a href="#popup3">
-						<div class="left_next"> 
-							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
-						</div>
-					</a>
-					<a href="#popup5">
-						<div class="right_next">
-							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
-						</div>
-					</a>
-				</div>
-				<img src="<?php echo $pic_4; ?>" alt="Porsche Picture">
-			</div>
-		</div>
-
-		<div id="popup5" class="overlay">
-			<div class="popup">
-				<a class="close" href="#">&times;</a>
-				<div class="contain_arrows">
-					<a href="#popup4">
-						<div class="left_next"> 
-							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
-						</div>
-					</a>
-					<a href="#popup6">
-						<div class="right_next">
-							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
-						</div>
-					</a>
-				</div>
-				<img src="<?php echo $pic_5; ?>" alt="Porsche Picture">
-			</div>
-		</div>
-
-		<div id="popup6" class="overlay">
-			<div class="popup">
-				<a class="close" href="#">&times;</a>
-				<div class="contain_arrows">
-					<a href="#popup5">
-						<div class="left_next"> 
-							<img src="graphics/left_arrow_p.png" alt="Left Arrow">
-						</div>
-					</a>
-					<a href="#popup1">
-						<div class="right_next">
-							<img src="graphics/right_arrow_p.png" alt="Right Arrow">
-						</div>
-					</a>
-				</div>
-				<img src="<?php echo $pic_6; ?>" alt="Porsche Picture">
-			</div>
-		</div>
-
-
-
-
+		<?php 
+		};
+		mysqli_free_result($result);
+		 ?>
 
 		
 		<div class="header_1">
@@ -271,36 +182,22 @@
 		</div>
 
 		<div class="pic_wrap">
+
+
+			<?php
+			  for ($count = 1; $count <= 6; $count++) {
+			?>
+
+
 			<div>
-				<a href="#popup1">
-					<img class="pic1" src="<?php echo $pic_1; ?>" alt="Porsche Pic-1">
+				<a href="#popup<?php echo $count; ?>">
+					<img class="pic<?php echo $count;?>" src="graphics/<?php echo $brand_pic; ?>_<?php echo $count; ?>.jpg" alt="<?php echo $brand; ?> Pic-<?php echo $count; ?>">
 				</a>
 			</div>
-			<div>
-				<a href="#popup2">
-					<img class="pic2" src="<?php echo $pic_2; ?>" alt="Porsche Pic-2">
-				</a>
-			</div>
-			<div>
-				<a href="#popup3">
-					<img class="pic3" src="<?php echo $pic_3; ?>" alt="Porsche Pic-3">
-				</a>
-			</div>
-			<div>
-				<a href="#popup4">
-					<img class="pic4" src="<?php echo $pic_4; ?>" alt="Porsche Pic-4">
-				</a>
-			</div>
-			<div>
-				<a href="#popup5">
-					<img class="pic5" src="<?php echo $pic_5; ?>" alt="Porsche Pic-5">
-				</a>
-			</div>
-			<div>
-				<a href="#popup6">
-					<img class="pic6" src="<?php echo $pic_6; ?>" alt="Porsche Pic-6">
-				</a>
-			</div>
+			<?php 
+			};
+			mysqli_free_result($result);
+			 ?>
 		</div>
 
 		<?php mysqli_close($connection); ?>

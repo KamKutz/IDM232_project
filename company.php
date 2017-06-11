@@ -23,7 +23,7 @@
 	        $brand = $row['brand'];
 	        $company = $row['company'];
 	        $website = $row['website'];
-	        // Want to see everything available? Uncomment these lines for some debug info:
+	        // All info in array, uncomment to see:
 	        // echo "<pre>";
 	        // print_r($row);
 	        // echo "</pre>";
