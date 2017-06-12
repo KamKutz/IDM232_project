@@ -1,0 +1,185 @@
+@mixin hideTapHighlightColor() {
+	//Prevent highlight colour when element is tapped
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@mixin hardwareAccel() {
+	//Improve performance on mobile/tablet devices
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+	//Improve aliasing on mobile/tablet devices
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+$defaultDuration: .3s;
+
+
+
+
+
+.comp_audi {
+	background: url(../graphics/audi_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_aston {
+	background: url(../graphics/aston_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_bmw {
+	background: url(../graphics/bmw_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_ferrari {
+	background: url(../graphics/ferrari_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_lamb {
+	background: url(../graphics/lamb_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_mercedes {
+	background: url(../graphics/mercedes_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_porsche {
+	background: url(../graphics/porsche_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.comp_tesla {
+	background: url(../graphics/tesla_company.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.white_box {
+	width: 100%;
+	background-color: rgba(255,255,255,.85);
+	margin: 170px 0 0 0;
+	position: absolute;
+	p {
+		font-family: 'Abel', sans-serif;
+		font-size: 16px;
+		line-height: 1.6;
+		text-indent: 35px;
+		padding: 20px;
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+	}
+}
+
+.contain_web {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	a {
+		text-decoration: none;
+	}
+}
+
+// .skew {
+// 	// display: inline-block;
+// 	// transition-duration: $defaultDuration;
+// 	// transition-property: transform;
+
+// 	// @include hideTapHighlightColor();
+// 	// @include hardwareAccel();
+// 	// @include improveAntiAlias();
+
+// 	// &:hover {
+// 	// 	transform: skew(-10deg);
+// 	// }
+// }
+
+.website {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 420px 0 0 0;
+	div {
+		h5 {
+			font-family: 'Abel', sans-serif;
+			font-size: 30px;
+			padding: 15px;
+			font-weight: 300;
+			color: white;
+			margin: -9px auto;
+		}
+		border: solid 3px white;
+		cursor: pointer;
+		background-color: black;
+		height: 50px;
+		display: inline-block;
+		transition-duration: $defaultDuration;
+		transition-property: transform;
+
+		@include hideTapHighlightColor();
+		@include hardwareAccel();
+		@include improveAntiAlias();
+
+		&:hover {
+			transform: skew(-20deg);
+		}
+	}
+}
+
+ //  _____       _      _        _   
+ // |_   _|__ _ | |__  | |  ___ | |_ 
+ //   | | / _` || '_ \ | | / _ \| __|
+ //   | || (_| || |_) || ||  __/| |_ 
+ //   |_| \__,_||_.__/ |_| \___| \__|
+@media screen and (min-width: 768px) {
+	.white_box {
+		width: 70%;
+	}
+
+	.website {
+		margin: 500px 0 0 0;
+	}
+
+	.white_contain {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+ // ____              _     _                
+ // |  _ \   ___  ___ | | __| |_  ___   _ __  
+ // | | | | / _ \/ __|| |/ /| __|/ _ \ | '_ \ 
+ // | |_| ||  __/\__ \|   < | |_| (_) || |_) |
+ // |____/  \___||___/|_|\_\ \__|\___/ | .__/ 
+ //                                    |_|    
+@media screen and (min-width: 1024px) {
+	.white_box {
+		width: 60%;
+		p {
+			font-size: 18px;
+		}
+	}
+
+	.website {
+		margin: 525px 0 0 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

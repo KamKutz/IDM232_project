@@ -1,0 +1,489 @@
+.info_wrap {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	p {
+		font-family: 'Abel', sans-serif;
+		font-size: 18px;
+		color: white;
+		margin: 0 50px 0 -40px;
+	}
+}
+
+.skill-list {
+	p {
+		margin: 0 auto;
+		 color: white;
+	}
+}
+
+.stat_title {
+	font-family: 'Abel', sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+.stat_info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p {
+		font-family: 'Abel', sans-serif;
+		color: white;
+	}
+}
+
+.data {
+	font-family: 'Abel', sans-serif;
+	font-size: 16px;
+	list-style-type: none;
+	color: white;
+}
+
+.bottom_wrap {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.divider {
+	width: 80%;
+	height: 5px;
+	background-color: white;
+	margin: 0 0 0 0;
+}
+
+.p_bar_2 {
+	width: 30px;
+	height: 30px;
+	background-color: #BBA815;
+}
+
+.p_bar_audi {
+	width: 30px;
+	height: 30px;
+	background-color: #E21D38;
+}
+
+.p_bar_aston {
+	width: 30px;
+	height: 30px;
+	background-color: #1B774E;
+}
+
+.p_bar_bmw {
+	width: 30px;
+	height: 30px;
+	background-color: #0049BC;
+}
+
+.p_bar_ferrari {
+	width: 30px;
+	height: 30px;
+	background-color: #D2C708;
+}
+
+.p_bar_lamb {
+	width: 30px;
+	height: 30px;
+	background-color: #F6C441;
+}
+
+.p_bar_mercedes {
+	width: 30px;
+	height: 30px;
+	background-color: #AFB2B2;
+}
+
+.p_bar_porsche {
+	width: 30px;
+	height: 30px;
+	background-color: #BBA815;
+}
+
+.p_bar_tesla {
+	width: 30px;
+	height: 30px;
+	background-color: #E31937;
+}
+
+.b_bar_2 {
+	width: 30px;
+	height: 30px;
+	background-color: #36AAF7;
+}
+
+.length {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin: 0 0 0 15px;
+
+	p {
+		font-family: 'Abel', sans-serif;
+		font-size: 15px;
+	}
+}
+
+.end {
+	margin: 0 30px 0 0;
+}
+
+
+
+
+progress {
+  appearance: none;
+   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-size: auto;
+  height: 50px;
+  width: 100%;
+}
+
+.graph_text {
+	font-family: 'Abel', sans-serif;
+	font-size: 24px;
+	font-weight: 300;
+	padding-bottom: 20px;
+	text-align: left;
+}
+
+.skill_1 {
+	progress::-webkit-progress-value { 
+	background: #36AAF7; 
+}
+}
+
+.skill_2 {
+	progress::-webkit-progress-value { 
+	background: #BBA815; 
+}
+}
+
+.skill_1 {
+	progress::-moz-progress-bar { 
+	background: #36AAF7; 
+}
+}
+
+.skill_2 {
+	progress::-moz-progress-bar { 
+	background: #BBA815; 
+}
+}
+
+
+.skill_2_audi {
+	progress::-webkit-progress-value { 
+	background: #E21D38; 
+}
+}
+
+.skill_2_audi {
+	progress::-moz-progress-bar { 
+	background: #E21D38; 
+}
+}
+
+.skill_2_aston {
+	progress::-webkit-progress-value { 
+	background: #1B774E; 
+}
+}
+
+.skill_2_aston {
+	progress::-moz-progress-bar { 
+	background: #1B774E; 
+}
+}
+
+.skill_2_bmw {
+	progress::-webkit-progress-value { 
+	background: #0049BC; 
+}
+}
+
+.skill_2_bmw {
+	progress::-moz-progress-bar { 
+	background: #0049BC; 
+}
+}
+
+.skill_2_ferrari {
+	progress::-webkit-progress-value { 
+	background: #D2C708; 
+}
+}
+
+.skill_2_ferrari {
+	progress::-moz-progress-bar { 
+	background: #D2C708; 
+}
+}
+
+.skill_2_lamb {
+	progress::-webkit-progress-value { 
+	background: #F6C441; 
+}
+}
+
+.skill_2_lamb {
+	progress::-moz-progress-bar { 
+	background: #F6C441; 
+}
+}
+
+.skill_2_mercedes {
+	progress::-webkit-progress-value { 
+	background: #AFB2B2; 
+}
+}
+
+.skill_2_mercedes {
+	progress::-moz-progress-bar { 
+	background: #AFB2B2; 
+}
+}
+
+.skill_2_porsche {
+	progress::-webkit-progress-value { 
+	background: #BBA815; 
+}
+}
+
+.skill_2_porsche {
+	progress::-moz-progress-bar { 
+	background: #BBA815; 
+}
+}
+
+.skill_2_tesla {
+	progress::-webkit-progress-value { 
+	background: #E31937; 
+}
+}
+
+.skill_2_tesla {
+	progress::-moz-progress-bar { 
+	background: #E31937; 
+}
+}
+
+
+
+
+
+
+
+
+
+// The unordered list
+.skill-list {
+  list-style: none;
+  margin: 0;
+  padding: 1em;
+}
+
+// The list item
+.skill_1 {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2 {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_audi {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_aston {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_bmw {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_ferrari {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_lamb {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_mercedes {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_porsche {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+.skill_2_tesla {
+  margin-bottom: 1em;
+  position: relative;
+  animation: progressBar 1.3s cubic-bezier(.26,.61,.79,1.19);
+  h3 {
+    color: white;
+    font-size: 1em;
+    font-family: 'Abel', sans-serif;
+    left: 1em;
+    line-height: 0;
+    position: absolute;
+    top: .65em;
+  }
+}
+
+@keyframes progressBar {
+  0% { width: 0; 
+  }
+  100% { width: 100%; 
+  }
+}
+
+
+
+
+ //  _____       _      _        _   
+ // |_   _|__ _ | |__  | |  ___ | |_ 
+ //   | | / _` || '_ \ | | / _ \| __|
+ //   | || (_| || |_) || ||  __/| |_ 
+ //   |_| \__,_||_.__/ |_| \___| \__|
+@media screen and (min-width: 768px) {
+	.graph_text {
+		
+	}
+
+	.graph_wrap {
+		margin-top: 200px;
+	}
+
+	.info_wrap {
+		p {
+			margin: 0 50px 0 -180px;
+		}
+	}
+
+	.data {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 0 0 10px;
+		li {
+			padding: 10px 0 0 30px;
+		}
+	}
+
+}
+
+
+
+
+
+
+

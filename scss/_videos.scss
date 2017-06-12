@@ -1,0 +1,84 @@
+
+.contain_vid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin: -65px 0 0 0;
+	iframe {
+		width: 375px;
+		height: 190px;
+	}
+	p {
+		font-family: 'Abel', sans-serif;
+		color: white;
+		max-width: 400px;
+		padding: 0 1.5rem;
+	}
+	h3 {
+		font-family: 'Poiret One', cursive;
+		color: white;
+		font-size: 20px;
+		max-width: 400px;
+		margin-left: 75px;
+	}
+}
+
+.h3_wrap {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	width: 67%;
+}
+
+
+
+ // |_   _|__ _ | |__  | |  ___ | |_ 
+ //   | | / _` || '_ \ | | / _ \| __|
+ //   | || (_| || |_) || ||  __/| |_ 
+ //   |_| \__,_||_.__/ |_| \___| \__|
+@media screen and (min-width: 768px) {
+	.contain_vid {
+		margin: 200px 0 0 0;
+		iframe {
+			width: 700px;
+			height: 400px;
+		}
+		p {
+		max-width: 600px;
+		margin-left: 45px;
+		padding: 0 1rem;
+		}
+		h3 {
+			font-size: 25px;
+			max-width: 400px;
+			margin-left: 232px;
+		}
+	}
+}
+
+ // ____              _     _                
+ // |  _ \   ___  ___ | | __| |_  ___   _ __  
+ // | | | | / _ \/ __|| |/ /| __|/ _ \ | '_ \ 
+ // | |_| ||  __/\__ \|   < | |_| (_) || |_) |
+ // |____/  \___||___/|_|\_\ \__|\___/ | .__/ 
+ //                                    |_|    
+@media screen and (min-width: 1024px) {
+		.contain_vid {
+		margin: 200px 0 0 0;
+		iframe {
+			width: 900px;
+			height: 500px;
+		}
+		p {
+			max-width: 800px;
+			margin-left: 50px;
+		}
+		h3 {
+			font-size: 27px;
+			max-width: 400px;
+			margin-left: 292px;
+		}
+	}
+}
