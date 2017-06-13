@@ -38,10 +38,10 @@
 
 
   // Step 1: Create Database Connection
-  $dbhost = "localhost";
-  $dbuser = "root";
-  $dbpass = "root";
-  $dbname = "idm232_project";
+  $dbhost = "kamkutz.com";
+  $dbuser = "kamkutzc_idm232";
+  $dbpass = "1@-gv2U0@G](";
+  $dbname = "kamkutzc_idm232";
   $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
   // Check the connection is good with no errors
   if (mysqli_connect_errno()) {
